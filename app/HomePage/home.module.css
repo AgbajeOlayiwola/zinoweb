@@ -1,0 +1,72 @@
+.rearange{
+    display: flex;
+    align-items: center;
+}
+.flexPad{
+    padding: 0px 279px;
+    width: 57.56%;
+}
+.imgControl img{
+    height: 100vh;
+    width: 42.43%;
+    width: fit-content;
+}
+.emailInput{
+    padding:10px 0px 10px 20px;
+    border: 1px solid #1111117D;
+    border-radius: 1rem;
+    line-height: 32px;
+    width: 70.2%;
+}
+.emailInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #4C8E0099;
+    opacity: 1; /* Firefox */
+  }
+  
+  .emailInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #4C8E0099;
+  }
+  
+  .emailInput::-ms-input-placeholder { /* Microsoft Edge */
+    color: #4C8E0099;
+  }
+.btn{
+    background: #4C8E00;
+    color: white;
+    padding:10px 30px 10px 30px;
+    border: none;
+    border-radius: 1rem;
+    width: 25.6%;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 32px;
+}
+.formFlex{
+    display: flex;
+    gap: 8px;
+    margin-top: 40px;
+}
+.htSpan{
+    margin: 0px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 53px;
+}
+.htSpan span{
+   color: #4C8E00;
+}
+.mainParagraph{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: #455246;
+    margin-top: 15px;
+}
+.signUp{
+    color: #555D6D;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    width: 65%;
+    margin-top: 1.25rem;
+}
