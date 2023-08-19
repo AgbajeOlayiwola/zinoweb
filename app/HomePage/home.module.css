@@ -1,72 +1,146 @@
-.rearange{
-    display: flex;
-    align-items: center;
+.rearange {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.flexPad{
-    padding: 0px 279px;
-    width: 57.56%;
+.flexPad {
+  /* padding: 70px 0px; */
+  width: 58%;
+  box-sizing: border-box;
 }
-.imgControl img{
-    height: 100vh;
-    width: 42.43%;
-    width: fit-content;
+
+.flexPad > div {
+  width: 69%;
+  margin: 0px auto;
 }
-.emailInput{
-    padding:10px 0px 10px 20px;
-    border: 1px solid #1111117D;
-    border-radius: 1rem;
-    line-height: 32px;
-    width: 70.2%;
+
+.imgControl {
+  height: 100vh;
+  flex: 1;
 }
-.emailInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #4C8E0099;
-    opacity: 1; /* Firefox */
+
+.imgControl img {
+  width: 100%;
+  height: 100%;
+}
+.emailInput {
+  padding: 10px 0px 10px 20px;
+  border: 1px solid #1111117d;
+  border-radius: 1rem;
+  line-height: 32px;
+  width: 72%;
+  box-sizing: border-box;
+}
+.emailInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #4c8e0099;
+  opacity: 1; /* Firefox */
+}
+
+.emailInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #4c8e0099;
+}
+
+.emailInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #4c8e0099;
+}
+.btn {
+  background: #4c8e00;
+  color: white;
+  padding: 10px 0px;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  width: 24%;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 32px;
+  box-sizing: border-box;
+}
+.formFlex {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  align-items: center;
+}
+.htSpan {
+  margin: 0px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0.48px;
+}
+.htSpan span {
+  color: #4c8e00;
+}
+.mainParagraph {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: #455246;
+  margin-top: 15px;
+}
+.signUp {
+  color: #555d6d;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  width: 65%;
+  margin-top: 1.25rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.zinoLogo {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .rearange {
+    flex-direction: column-reverse;
+    padding-bottom: 58px;
+    align-items: unset;
   }
-  
-  .emailInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #4C8E0099;
+
+  .imgControl,
+  .flexPad {
+    width: 100%;
   }
-  
-  .emailInput::-ms-input-placeholder { /* Microsoft Edge */
-    color: #4C8E0099;
+
+  .mobile,
+  .zinoLogo {
+    display: block;
   }
-.btn{
-    background: #4C8E00;
-    color: white;
-    padding:10px 30px 10px 30px;
-    border: none;
-    border-radius: 1rem;
-    width: 25.6%;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 32px;
-}
-.formFlex{
-    display: flex;
-    gap: 8px;
-    margin-top: 40px;
-}
-.htSpan{
-    margin: 0px;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 53px;
-}
-.htSpan span{
-   color: #4C8E00;
-}
-.mainParagraph{
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 24px;
-    color: #455246;
-    margin-top: 15px;
-}
-.signUp{
-    color: #555D6D;
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1.25rem;
-    width: 65%;
-    margin-top: 1.25rem;
+
+  .desktop,
+  .zinoLogos {
+    display: none;
+  }
+
+  .zinoLogo {
+    padding: 8px 16px;
+  }
+
+  .flexPad > div {
+    width: 95%;
+  }
+
+  .htSpan {
+    font-size: 2rem;
+  }
+
+  .mainParagraph,
+  .btn {
+    font-size: 0.88rem;
+  }
+
+  .signUp {
+    width: 75%;
+  }
 }

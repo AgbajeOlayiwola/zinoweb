@@ -3,14 +3,8 @@ import styles from "./comingsoon.module.css";
 
 const ComingsoonSvg = () => {
   return (
-    <div>
-      <svg
-        width="252"
-        height="266"
-        viewBox="0 0 252 266"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className={styles.comingSoonSvg}>
+      <svg width="252" height="266" viewBox="0 0 252 266" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g style={{ mixBlendMode: "multiply" }} opacity="0.55">
           <path
             className={styles.path}
