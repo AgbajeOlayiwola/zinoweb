@@ -1,13 +1,21 @@
 .path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    
-    animation: dash 5s linear forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 1;
   }
-  
-  @keyframes dash {
-    to {
-        stroke-dasharray: 10;
-      stroke-dashoffset: 1;
-    }
+}
+
+@media screen and (max-width: 500px) {
+  .comingSoonSvg,
+  .comingSoonSvg svg {
+    width: 100%;
+    text-align: center;
   }
+}

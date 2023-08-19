@@ -1,16 +1,10 @@
-body{
-    padding: 0px;
-    margin: 0px;
+body {
+  padding: 0px;
+  margin: 0px;
 }
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf');
-    font-weight: 500;
-    font-style: normal;
-    }
-    p{
-        font-style: 'Inter';
-    }
-    h1{
-        font-style: 'Inter';
-    }
+  font-family: "Inter", sans-serif;
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
