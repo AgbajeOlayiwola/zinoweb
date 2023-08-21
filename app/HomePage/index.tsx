@@ -1,3 +1,4 @@
+"use client";
 import LogoSvg from "@/Component/SVGS/LogoSvg";
 import ComingsoonSvg from "@/Component/SVGS/comingsoon";
 import Image from "next/image";
@@ -18,18 +19,39 @@ const HomePage = () => {
             <span> agents</span> all under one platform
           </h1>
           <p className={styles.mainParagraph}>
-            We&apos;re putting the finishing touches on our platform and getting ready to launch. Sign up for updates and be the first to know when we go live.
+            We&apos;re putting the finishing touches on our platform and getting
+            ready to launch. Sign up for updates and be the first to know when
+            we go live.
           </p>
           <form className={styles.formFlex}>
-            <input type="text" className={styles.emailInput} placeholder="Email Address" />
+            <input
+              type="text"
+              className={styles.emailInput}
+              placeholder="Email Address"
+            />
             <button className={styles.btn}>Invite me</button>
           </form>
-          <p className={styles.signUp}>Sign up for updates to be the first to know when we launch. No spam, just important information and exclusive offers.</p>
+          <p className={styles.signUp}>
+            Sign up for updates to be the first to know when we launch. No spam,
+            just important information and exclusive offers.
+          </p>
         </div>
       </div>
       <div className={styles.imgControl}>
-        <Image src="/images/Rectangle2.png" width={100} height={100} alt="image" className={styles.desktop} />
-        <Image src="/images/coming.png" width={100} height={100} alt="image" className={styles.mobile} />
+        <Image
+          src="/images/Rectangle2.png"
+          width={100}
+          height={100}
+          alt="image"
+          className={styles.desktop}
+        />
+        <Image
+          src="/images/coming.png"
+          width={100}
+          height={100}
+          alt="image"
+          className={styles.mobile}
+        />
       </div>
       <div className={styles.zinoLogo}>
         <LogoSvg />

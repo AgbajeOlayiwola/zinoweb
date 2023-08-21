@@ -1,6 +1,8 @@
 .rearange {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 30px;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -12,16 +14,22 @@
 }
 
 .flexPad > div {
+  min-width: 555px;
+  max-width: 555px;
   width: 69%;
   margin: 0px auto;
 }
 
 .imgControl {
+  min-width: 530px;
+  max-width: 611px;
+  width: 43.64%;
   height: 100vh;
   flex: 1;
 }
 
 .imgControl img {
+
   width: 100%;
   height: 100%;
 }
@@ -34,18 +42,14 @@
   box-sizing: border-box;
 }
 .emailInput::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #4c8e0099;
-  opacity: 1; /* Firefox */
+  opacity: 1; 
 }
 
 .emailInput:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
   color: #4c8e0099;
 }
-
 .emailInput::-ms-input-placeholder {
-  /* Microsoft Edge */
   color: #4c8e0099;
 }
 .btn {
@@ -101,7 +105,7 @@
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   .rearange {
     flex-direction: column-reverse;
     padding-bottom: 58px;
@@ -112,7 +116,12 @@
   .flexPad {
     width: 100%;
   }
-
+  .flexPad > div {
+    min-width: 455px;
+    max-width: 455px;
+    width: 69%;
+    margin: 0px auto;
+  }
   .mobile,
   .zinoLogo {
     display: block;
@@ -133,14 +142,17 @@
 
   .htSpan {
     font-size: 2rem;
+    line-height: 32px;
   }
 
   .mainParagraph,
   .btn {
     font-size: 0.88rem;
+    line-height: 19.6px;
   }
 
   .signUp {
     width: 75%;
   }
+
 }

@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./comingsoon.module.css";
 
 const ComingsoonSvg = () => {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+    console.log(width);
+  };
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+    // component is mounted and window is available
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    // unsubscribe from the event on component unmount
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, [width]);
   return (
     <div className={styles.comingSoonSvg}>
-      <svg width="252" height="266" viewBox="0 0 252 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width={width <= 750 ? "390" : "252"}
+        height={height <= 750 ? "108" : "266"}
+        viewBox="0 0 252 266"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <g style={{ mixBlendMode: "multiply" }} opacity="0.55">
           <path
             className={styles.path}
