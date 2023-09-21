@@ -1,0 +1,28 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: #F5F5F5;
+    border-radius: 24px;
+    width: 95%;
+}
+.inputs label{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #718F79;
+}
+.inputs input{
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+/* Remove focus border from all input elements */
+.inputs input:focus {
+    outline: none;
+  }
+  

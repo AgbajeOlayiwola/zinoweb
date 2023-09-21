@@ -1,0 +1,63 @@
+.inputFile label {
+    border-radius: 24px;
+    border: 1px dashed var(--neutral-neutral-400, #4C4D50);
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.labelP{
+    color: #7B9994;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.lblDiclaimr p{
+    margin: 0px;
+}
+.lblDiclaimr{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.disclaim{
+    color: var(--primary-700, #A2A2A2);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.label{
+    display: flex !important;
+    gap: 10px;
+}
+.inputFile label input {
+    display: none;
+}
+.inputFile{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: #F5F5F5;
+    border-radius: 24px;
+    width: 95%;
+}
+.inputFile > p{
+    margin: 0px;
+    color: #718F79;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.upload{
+    color: var(--primary-400, #4C8E00);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

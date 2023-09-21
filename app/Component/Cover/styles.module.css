@@ -1,0 +1,8 @@
+.outer{
+    display: flex;
+    justify-content: center;
+}
+.inner{
+    width: 90%;
+    max-width: 1440px;
+}

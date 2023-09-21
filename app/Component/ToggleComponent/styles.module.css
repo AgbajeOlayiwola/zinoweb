@@ -1,0 +1,78 @@
+.toggleSwitch {
+    width: 40px;
+    height: 21px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .checkBoxText{
+    border: none;
+    background: transparent;
+  }
+  .toggleBox > div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F5F5F5;
+    border-radius: 24px;
+    width: 95%;
+    gap: 20px;
+}
+.toggleBox > input{
+  width: 100%;
+}
+.toggleBox > input:focus{
+  outline: none;
+
+}
+.toggleBox{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px;
+      background: #F5F5F5;
+      border-radius: 24px;
+      width: 95%;
+      gap: 0px;
+}
+.toggleBox > p{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #718F79;
+    }
+  
+  .slider {
+    width: 22px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggleSwitch.on {
+    background-color: #4caf50; /* Color when ON */
+  }
+  
+  .toggleSwitch.on .slider {
+    transform: translateX(18px); /* Slide to the right for ON */
+  }
+  
+  .toggleSwitch.off {
+    background-color: #ccc; /* Color when OFF */
+  }
+  
+  .toggleSwitch.off .slider {
+    transform: translateX(0); /* Slide to the left for OFF */
+  }
+  .noYes{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }

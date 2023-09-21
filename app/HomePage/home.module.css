@@ -1,158 +1,162 @@
-.rearange {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+.topBg{
+  background: url('/Images/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.flexPad {
-  /* padding: 70px 0px; */
-  width: 58%;
-  box-sizing: border-box;
-}
-
-.flexPad > div {
-  min-width: 555px;
-  max-width: 555px;
-  width: 69%;
-  margin: 0px auto;
-}
-
-.imgControl {
-  min-width: 530px;
-  max-width: 611px;
-  width: 43.64%;
   height: 100vh;
-  flex: 1;
 }
-
-.imgControl img {
-
-  width: 100%;
-  height: 100%;
-}
-.emailInput {
-  padding: 10px 0px 10px 20px;
-  border: 1px solid #1111117d;
-  border-radius: 1rem;
-  line-height: 32px;
-  width: 72%;
-  box-sizing: border-box;
-}
-.emailInput::placeholder {
-  color: #4c8e0099;
-  opacity: 1; 
-}
-
-.emailInput:-ms-input-placeholder {
-  color: #4c8e0099;
-}
-.emailInput::-ms-input-placeholder {
-  color: #4c8e0099;
-}
-.btn {
-  background: #4c8e00;
-  color: white;
-  padding: 10px 0px;
-  cursor: pointer;
-  border: none;
-  border-radius: 1rem;
-  width: 24%;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 32px;
-  box-sizing: border-box;
-}
-.formFlex {
+.connect{
   display: flex;
-  gap: 20px;
-  margin-top: 40px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.svg{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.connect > h1{
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  max-width: 1136px;
+
+}
+.connect span{
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #4C8E00;
+}
+.connect div > p{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+width: 58.9%;
+    max-width: 1181px;
+    margin-bottom: 8%;
+}
+.formic{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.formic input{
+  border: 1px solid #FFF;
+  width: 32.9%;
+  background: none;
+  padding: 16px 0px 16px 20px;;
+  border-radius: 1rem;
+}
+.formic input::placeholder{
+  color: #FFF;
+}
+.button{
+width: 10%;
+}
+.button button{
+  padding: 16px 32px 16px 32px;
+  border-radius: 16px;
+  border: none;
+}
+.formCover{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.weAreP{
+  display: flex;
+  justify-content: center;
+}
+.vision{
+  display: flex;
   align-items: center;
 }
-.htSpan {
-  margin: 0px;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 53px;
-  letter-spacing: 0.48px;
+.vision h1{
+font-size: 32px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0.01em;
+text-align: left;
+color: #4C8E00;
+
 }
-.htSpan span {
-  color: #4c8e00;
+.vision p{
+  max-width: 709px;
+  width: 85.2%;
 }
-.mainParagraph {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 24px;
-  color: #455246;
-  margin-top: 15px;
+.abboutUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+
 }
-.signUp {
-  color: #555d6d;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1.25rem;
+.abboutUs h1{
+font-size: 36px;
+font-weight: 700;
+line-height: 54px;
+letter-spacing: 0.01em;
+text-align: left;
+
+}
+.abboutUs p{
   width: 65%;
-  margin-top: 1.25rem;
+  text-align: center;
 }
-
-.mobile {
-  display: none;
+.coreValues{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  gap: 20px;
 }
+.coreValues div h1{
+font-size: 32px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0.01em;
+text-align: left;
+color: #4C8E00;
 
-.zinoLogo {
-  display: none;
 }
+.coreValues div{
+  width: 54%;
+}
+.coreValues div p{
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.01em;
+text-align: left;
 
-@media screen and (max-width: 750px) {
-  .rearange {
-    flex-direction: column-reverse;
-    padding-bottom: 58px;
-    align-items: unset;
-  }
-
-  .imgControl,
-  .flexPad {
-    width: 100%;
-  }
-  .flexPad > div {
-    min-width: 455px;
-    max-width: 455px;
-    width: 69%;
-    margin: 0px auto;
-  }
-  .mobile,
-  .zinoLogo {
-    display: block;
-  }
-
-  .desktop,
-  .zinoLogos {
-    display: none;
-  }
-
-  .zinoLogo {
-    padding: 8px 16px;
-  }
-
-  .flexPad > div {
-    width: 95%;
-  }
-
-  .htSpan {
-    font-size: 2rem;
-    line-height: 32px;
-  }
-
-  .mainParagraph,
-  .btn {
-    font-size: 0.88rem;
-    line-height: 19.6px;
-  }
-
-  .signUp {
-    width: 75%;
-  }
+}
+.coreValues div li p{
+font-size: 20px;
+max-width: 606px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: 0.01em;
+text-align: left;
 
 }

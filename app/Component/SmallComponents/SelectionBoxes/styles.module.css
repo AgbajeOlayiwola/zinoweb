@@ -1,0 +1,38 @@
+.box{
+    background: #F5F5F5;
+    padding: 16px;
+    height: 93px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.innerBox{
+    display: flex;
+}
+.imageRight > img{
+    height: 102px;
+    width: 102px;
+    margin-top: -76px;
+}
+.inner > p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7B7B7B;
+    max-width: 224px;
+}
+.inner > h2{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.imageRight{
+    display: flex;
+    align-items: center;
+}
+.imageRight  svg{
+    margin-bottom: 60px;
+}

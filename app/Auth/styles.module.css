@@ -1,0 +1,67 @@
+.authSidei{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    
+}
+.createAccount h2{
+    color: #4C8E00;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 0px;
+
+}
+.createAccount p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 23px;
+}
+.create{
+    padding-left: 90px;
+}
+.generalCover{
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.generalCover > div{
+    padding-top: 20px;
+    width: 557px;
+    max-width: 557px;
+}
+.generalCover::-webkit-scrollbar {
+    display: none;
+  }
+  
+.generalCover div > svg{
+    margin-bottom: 70px;
+}
+.sideImg{
+    height: 100vh;
+   
+}
+
+.whereImat{
+    display: flex;
+    gap: 10px;
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
