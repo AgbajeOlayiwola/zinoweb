@@ -1,0 +1,69 @@
+.didnt{
+    color: #656565;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
+.didnt span{
+    color: var(--primary-400, #4C8E00);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+.verify{
+    color: #4C8E00;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.13px;
+    text-align: center;
+}
+.verifyAccount{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.verifyAccount p{
+    margin: 0px;
+}
+.verifyAccount p > span{
+    color: #4C8E00;
+}
+.kindly{
+    color: #4C8E00;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
+.veriItem{
+    color: #7B7B7B;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.veri{
+    color: #7B7B7B;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+}

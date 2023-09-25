@@ -25,6 +25,13 @@ export const mutationApi = createApi({
         body: newFarmer,
       }),
     }),
+    registerNewAgent: builder.mutation({
+      query: (newagent) => ({
+        url: "/register/agent",
+        method: "POST",
+        body: newagent,
+      }),
+    }),
     verifyPhoneToken: builder.mutation({
       query: (body: any) => {
         return {
@@ -80,4 +87,5 @@ export const {
   useVerifyPhoneTokenMutation,
   useCreateFarmMutation,
   useEditFarmMutation,
+  useRegisterNewAgentMutation,
 } = mutationApi;

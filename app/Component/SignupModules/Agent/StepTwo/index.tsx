@@ -1,13 +1,13 @@
 import Inputs from "@/app/Component/Input";
 import React from "react";
-import styles from "../../styles.module.css";
+import styles from "../styles.module.css";
 import Select from "@/app/Component/Select";
 import FirstButton from "@/app/Component/Buttons/firstButton";
 import { gender, nationality } from "@/utils/data";
 import Already from "@/app/Component/SmallComponents/Already";
 import Onboarding from "@/app/Component/Layout/Onboarding";
 
-const StepOne = ({ step }: { step: any }) => {
+const StepTwo = ({ step }: { step: any }) => {
   return (
     <div>
       <Onboarding steps={step}>
@@ -67,4 +67,4 @@ const StepOne = ({ step }: { step: any }) => {
   );
 };
 
-export default StepOne;
+export default StepTwo;
