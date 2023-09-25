@@ -23,7 +23,7 @@ const StepThree = ({ step }: { step: any }) => {
   return (
     <div>
       <Onboarding steps={step}>
-        <div className={styles.onBoardingLayout}>
+        {/* <div className={styles.onBoardingLayout}>
           <div>
             <Inputs
               type="text"
@@ -42,11 +42,11 @@ const StepThree = ({ step }: { step: any }) => {
             <br />
             <br />
           </div>
-          <FirstButton type="Submit" text="Continue" />
+          <FirstButton action={()=>{}}type="Submit" text="Continue" />
           <div className={styles.skip}>
             <p>Skip</p>
           </div>
-        </div>
+        </div> */}
       </Onboarding>
     </div>
   );

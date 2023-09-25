@@ -24,7 +24,7 @@ const StepFour = ({ step }: { step: any }) => {
     <Onboarding steps={step}>
       <div className={styles.onBoardingLayout}>
         <div>
-          <div className={styles.onBoardingLayout}>
+          {/* <div className={styles.onBoardingLayout}>
             <div>
               <ToggleComponent
                 toggleLabel="Are you a qualified food and agribusiness expert?"
@@ -61,8 +61,14 @@ const StepFour = ({ step }: { step: any }) => {
                 </>
               )}
             </div>
-          </div>
-          <FirstButton type="Submit" text="Continue" />
+          </div> */}
+          <FirstButton
+            action={() => {
+              console.log("test");
+            }}
+            type="Submit"
+            text="Continue"
+          />
         </div>
       </div>
     </Onboarding>

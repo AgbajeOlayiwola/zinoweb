@@ -16,9 +16,7 @@ import { useAppDispatch } from "@/reduxtoolkit/store/store";
 import { useVerifyFarmerIdMutation } from "@/reduxtoolkit/api/mutationApi";
 const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const dispatch = useAppDispatch();
-  const [selectedIdentification, setSelectedIdentification] = useState<
-    string | undefined
-  >(undefined);
+  const [selectedIdentification, setSelectedIdentification] = useState<string | undefined>(undefined);
   const [
     verifyFarmerId,
     {
@@ -77,33 +75,17 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
             onSubmit={(values, { setSubmitting }) => {
               verifyFarmerId(values);
               setSubmitting(false);
-            }}
-          >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              setFieldValue,
-              handleSubmit,
-            }) => (
+            }}>
+            {({ values, errors, touched, handleChange, setFieldValue, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
                 <div>
-                  <Select
-                    onSelectChange={(e: any) =>
-                      setFieldValue("id_type", e.target.value)
-                    }
-                    label="Type of Identification"
-                    dataSet={identification}
-                  />
+                  <Select onSelectChange={(e: any) => setFieldValue("id_type", e.target.value)} label="Type of Identification" dataSet={identification} />
                   <br />
                   <br />
                   {values.id_type === "Vnin" ? (
                     <>
                       <Inputs
-                        onchange={(e: any) =>
-                          setFieldValue("id_number", e.target.value)
-                        }
+                        onchange={(e: any) => setFieldValue("id_number", e.target.value)}
                         name="id_number"
                         value={values.id_number}
                         type="text"
@@ -116,9 +98,7 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   ) : (
                     <>
                       <Inputs
-                        onchange={(e: any) =>
-                          setFieldValue("id_number", e.target.value)
-                        }
+                        onchange={(e: any) => setFieldValue("id_number", e.target.value)}
                         name="id_number"
                         value={values.id_number}
                         type="text"
@@ -129,9 +109,7 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
                       <br />
 
                       <Inputs
-                        onchange={(e: any) =>
-                          setFieldValue("expiry", e.target.value)
-                        }
+                        onchange={(e: any) => setFieldValue("expiry", e.target.value)}
                         name="expiry"
                         value={values.expiry}
                         type="date"
@@ -147,16 +125,20 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
                         disclaimer=""
                         icon={<SolarCamera />}
                         uploadLabel="Upload ID"
-                        onChange={(file: any) =>
-                          handleFileUpload(file, setFieldValue)
-                        }
+                        onChange={(file: any) => handleFileUpload(file, setFieldValue)}
                       />
                       <br />
                       <br />
                     </>
                   )}
                 </div>
-                <FirstButton type="Submit" text="Continue" />
+                <FirstButton
+                  action={() => {
+                    console.log("test");
+                  }}
+                  type="Submit"
+                  text="Continue"
+                />
               </form>
             )}
           </Formik>

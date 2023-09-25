@@ -14,7 +14,8 @@ const Agents = () => {
       case 2:
         return <StepOne step={trackSpot} />;
       case 3:
-        return <StepTwo step={trackSpot} />;
+        // return <StepTwo step={trackSpot} />;
+        return <StepOne step={trackSpot} />;
       case 4:
         return <StepThree step={trackSpot} />;
       case 5:

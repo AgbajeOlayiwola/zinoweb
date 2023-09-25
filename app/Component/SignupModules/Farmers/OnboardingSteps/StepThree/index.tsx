@@ -17,17 +17,8 @@ import { useCreateFarmMutation } from "@/reduxtoolkit/api/mutationApi";
 const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-  const [
-    createFarm,
-    {
-      data: createFarmData,
-      isLoading: createFarmLoad,
-      isSuccess: createFarmSuccess,
-      isError: createFarmFalse,
-      error: createFarmErr,
-      reset: createFarmReset,
-    },
-  ] = useCreateFarmMutation();
+  const [createFarm, { data: createFarmData, isLoading: createFarmLoad, isSuccess: createFarmSuccess, isError: createFarmFalse, error: createFarmErr, reset: createFarmReset }] =
+    useCreateFarmMutation();
   useEffect(() => {
     if (createFarmData) {
       console.log(createFarmData);
@@ -43,9 +34,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
     // farm_location: yup.string().required("Enter Farm Location"),
     // farm_video: yup.string().required("Farm video required"),
     cac_reg_num: yup.string().required("CAC Registeration Number is required"),
-    commodity_value_chain: yup
-      .string()
-      .required("Commodity value Chain is required"),
+    commodity_value_chain: yup.string().required("Commodity value Chain is required"),
   });
   const initialValues = {
     farm_name: "",
@@ -64,22 +53,12 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
             onSubmit={(values, { setSubmitting }) => {
               createFarm(values);
               setSubmitting(false);
-            }}
-          >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              setFieldValue,
-              handleSubmit,
-            }) => (
+            }}>
+            {({ values, errors, touched, handleChange, setFieldValue, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
                 <div>
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("farm_name", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("farm_name", e.target.value)}
                     name="farm_name"
                     value={values.farm_name}
                     type="text"
@@ -89,9 +68,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   <br />
                   <br />
                   <ToggleComponent
-                    onchange={(e: any) =>
-                      setFieldValue("cac_reg_num", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("cac_reg_num", e.target.value)}
                     name="cac_reg_num"
                     toggleLabel="CAC Registration"
                     hasTextField={true}
@@ -101,20 +78,10 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   />
                   <br />
                   <br />
-                  <Select
-                    onSelectChange={(e: any) =>
-                      setFieldValue("commodity_value_chain", e.target.value)
-                    }
-                    label="Commodity Value Chain"
-                    dataSet={commodityValue}
-                  />
+                  <Select onSelectChange={(e: any) => setFieldValue("commodity_value_chain", e.target.value)} label="Commodity Value Chain" dataSet={commodityValue} />
                   <br />
                   <br />
-                  <Location
-                    onchange={(e: any) =>
-                      setFieldValue("farm_location", e.target.value)
-                    }
-                  />
+                  <Location onchange={(e: any) => setFieldValue("farm_location", e.target.value)} />
                   <br />
                   <br />
                   <InputFile
@@ -123,11 +90,18 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                     onChange={handleFileChange}
                     icon={<PulsCircleSvg />}
                     uploadLabel="Add file"
+                    name="Farm"
                   />
                   <br />
                   <br />
                 </div>
-                <FirstButton type="Submit" text="Continue" />
+                <FirstButton
+                  action={() => {
+                    console.log("test");
+                  }}
+                  type="Submit"
+                  text="Continue"
+                />
               </form>
             )}
           </Formik>

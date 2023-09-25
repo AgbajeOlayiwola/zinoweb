@@ -1,8 +1,15 @@
-.outer{
-    display: flex;
-    justify-content: center;
+.outer {
+  display: flex;
+  justify-content: center;
 }
-.inner{
-    width: 90%;
-    max-width: 1440px;
+.inner {
+  width: 90%;
+  max-width: 1440px;
+}
+
+@media screen and (max-width: 500px) {
+  .inner {
+    width: 92%;
+    max-width: 100%;
+  }
 }

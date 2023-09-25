@@ -4,10 +4,7 @@ import Onboarding from "@/app/Component/Layout/Onboarding";
 import OtpInput from "@/app/Component/OtpInput";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import {
-  useVerifyEmailTokenMutation,
-  useVerifyPhoneTokenMutation,
-} from "@/reduxtoolkit/api/mutationApi";
+import { useVerifyEmailTokenMutation, useVerifyPhoneTokenMutation } from "@/reduxtoolkit/api/mutationApi";
 const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   interface EmailPhoneData {
     emailData: string;
@@ -64,7 +61,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const submit = (e: any) => {
     e.preventDefault();
     const Phonedata = {
-      phone_num: emailPhone?.phoneNumberData,
+      // phone_num: emailPhone?.phoneNumberData,
       token: otpValue,
     };
     verifyPhoneToken(Phonedata);
@@ -72,7 +69,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const submitEmail = (e: any) => {
     e.preventDefault();
     const emaildata = {
-      phone_num: emailPhone?.emailData,
+      // phone_num: emailPhone?.emailData,
       token: otpValue,
     };
     verifyEmailToken(emaildata);
@@ -94,17 +91,16 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       <Onboarding steps={step}>
         <br />
         <div className={styles.verifyAccount}>
-          <p className={styles.veriItem}>
-            Verify your {verifyType ? <>email address</> : <>Phone Number</>}
-          </p>
+          <p className={styles.veriItem}>Verify your {verifyType ? <>email address</> : <>Phone Number</>}</p>
           <p className={styles.kindly}>Kindly enter code</p>
           <p className={styles.veri}>
-            A verification code has been sent to your{" "}
-            {verifyType ? <>email address</> : <>Phone Number</>}{" "}
+            A verification code has been sent to your {verifyType ? <>email address</> : <>Phone Number</>}{" "}
             {verifyType ? (
-              <span> {emailPhone?.emailData}</span>
+              // <span> {emailPhone?.emailData}</span>
+              <span>x</span>
             ) : (
-              <span> {emailPhone?.phoneNumberData}</span>
+              // <span> {emailPhone?.phoneNumberData}</span>
+              <span></span>
             )}
           </p>
         </div>
@@ -123,23 +119,28 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
             <br />
             {verifyType ? (
               <div onClick={submitEmail}>
-                <FirstButton type="Submit" text="Continue" />
+                <FirstButton
+                  action={() => {
+                    console.log("test");
+                  }}
+                  type="Submit"
+                  text="Continue"
+                />
               </div>
             ) : (
               <div onClick={submit}>
-                <FirstButton type="Submit" text="Continue" />
+                <FirstButton
+                  action={() => {
+                    console.log("test");
+                  }}
+                  type="Submit"
+                  text="Continue"
+                />
               </div>
             )}
             <br />
-            <p
-              className={styles.verify}
-              onClick={() => setVerifyType(!verifyType)}
-            >
-              {verifyType ? (
-                <> Verify using email address</>
-              ) : (
-                <>Verify using phone number</>
-              )}
+            <p className={styles.verify} onClick={() => setVerifyType(!verifyType)}>
+              {verifyType ? <> Verify using email address</> : <>Verify using phone number</>}
             </p>
           </div>
         </form>

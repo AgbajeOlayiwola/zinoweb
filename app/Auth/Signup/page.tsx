@@ -1,7 +1,9 @@
+"use client";
+
 import ImageSlider from "@/app/Component/imageSlider";
 import styles from "./styles.module.css";
 import React from "react";
-import Inputs from "@/app/Component/Input";
+// import Inputs from "@/app/Component/Input";
 import FirstButton from "@/app/Component/Buttons/firstButton";
 
 const Signup = () => {
@@ -12,12 +14,9 @@ const Signup = () => {
         <div className={styles.welcomeBack}>
           <div>
             <h1>Welcome back</h1>
-            <p>
-              Please kindly enter your log in information to start enjoying your
-              app
-            </p>
+            <p>Please kindly enter your log in information to start enjoying your app</p>
 
-            <Inputs
+            {/* <Inputs
               type="Email"
               label="Email Address"
               placeholder="Enter Your Email Address here...."
@@ -28,10 +27,16 @@ const Signup = () => {
               type="Password"
               label="Surname"
               placeholder="Enter your password here"
+            /> */}
+            <br />
+            <br />
+            <FirstButton
+              action={() => {
+                console.log("test");
+              }}
+              type="Submit"
+              text="Continue"
             />
-            <br />
-            <br />
-            <FirstButton type="Submit" text="Continue" />
           </div>
         </div>
       </div>

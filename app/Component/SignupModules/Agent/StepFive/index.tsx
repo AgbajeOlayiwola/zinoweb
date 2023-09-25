@@ -26,22 +26,26 @@ const StepFive = ({ step }: { step: any }) => {
         <div>
           <div className={styles.onBoardingLayout}>
             <div>
-              <ToggleComponent
+              {/* <ToggleComponent
                 toggleLabel="Are you a qualified food and agribusiness expert?"
                 no="No"
                 yes="Yes"
                 action={move}
-              />
+              /> */}
               <br />
               <br />
               <Select
                 label="Years of Post-graduation Technical Experience"
                 dataSet={gender}
+                onSelectChange={() => {
+                  console.log("test");
+                }}
               />
               <br />
               <br />
               <InputFile
                 label="Farm Video"
+                name="farm"
                 disclaimer="(360 degree video recording and upload)"
                 onChange={handleFileChange}
                 icon={<PulsCircleSvg />}
@@ -55,6 +59,11 @@ const StepFive = ({ step }: { step: any }) => {
                     type="text"
                     label="Surname"
                     placeholder="Address of Cooperative Group"
+                    name="surname"
+                    onchange={() => {
+                      console.log("test");
+                    }}
+                    value="Test"
                   />
                   <br />
                   <br />
@@ -62,7 +71,13 @@ const StepFive = ({ step }: { step: any }) => {
               )}
             </div>
           </div>
-          <FirstButton type="Submit" text="Continue" />
+          <FirstButton
+            action={() => {
+              console.log("test");
+            }}
+            type="Submit"
+            text="Continue"
+          />
         </div>
       </div>
     </Onboarding>
