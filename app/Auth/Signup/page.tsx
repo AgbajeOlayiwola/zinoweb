@@ -1,8 +1,8 @@
-import ImageSlider from "@/app/Component/imageSlider";
+import ImageSlider from "@/Component/imageSlider";
 import styles from "./styles.module.css";
 import React from "react";
-import Inputs from "@/app/Component/Input";
-import FirstButton from "@/app/Component/Buttons/firstButton";
+import Inputs from "@/Component/Input";
+import FirstButton from "@/Component/Buttons/firstButton";
 
 const Signup = () => {
   return (

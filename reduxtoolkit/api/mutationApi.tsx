@@ -77,6 +77,69 @@ export const mutationApi = createApi({
         };
       },
     }),
+    verifyAgentAddress: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/agent/verify/address",
+          method: "POST",
+          body,
+        };
+      },
+    }),
+    verifyAgentExperience: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/agent/verify/experience",
+          method: "POST",
+          body,
+        };
+      },
+    }),
+    virtualAccountAgnt: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/virtual/customer",
+          method: "POST",
+          body,
+        };
+      },
+    }),
+    editFarmer: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/farmer/edit",
+          method: "POST",
+          body,
+        };
+      },
+    }),
+    virtualAccountPin: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/transaction/pin",
+          method: "PUT",
+          body,
+        };
+      },
+    }),
+    sendVerificationToken: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/account/verification/email/generate_token",
+          method: "POST",
+          body,
+        };
+      },
+    }),
+    sendPhoneVerificationToken: builder.mutation({
+      query: (body: any) => {
+        return {
+          url: "/account/verification/phone_num/generate_token",
+          method: "POST",
+          body,
+        };
+      },
+    }),
   }),
 });
 
@@ -88,4 +151,11 @@ export const {
   useCreateFarmMutation,
   useEditFarmMutation,
   useRegisterNewAgentMutation,
+  useVerifyAgentAddressMutation,
+  useVerifyAgentExperienceMutation,
+  useVirtualAccountAgntMutation,
+  useVirtualAccountPinMutation,
+  useSendVerificationTokenMutation,
+  useSendPhoneVerificationTokenMutation,
+  useEditFarmerMutation,
 } = mutationApi;

@@ -1,12 +1,12 @@
 "use client";
-import LogoSvg from "@/app/Component/SVGS/LogoSvg";
-import ComingsoonSvg from "@/app/Component/SVGS/comingsoon";
+import LogoSvg from "@/Component/SVGS/LogoSvg";
+import ComingsoonSvg from "@/Component/SVGS/comingsoon";
 import Image from "next/image";
 import React from "react";
 import styles from "./home.module.css";
-import Cover from "@/app/Component/Cover";
-import FirstButton from "@/app/Component/Buttons/firstButton";
-import Layout from "@/app/Component/Layout";
+import Cover from "@/Component/Cover";
+import FirstButton from "@/Component/Buttons/firstButton";
+import Layout from "@/Component/Layout";
 
 const HomePage = () => {
   return (

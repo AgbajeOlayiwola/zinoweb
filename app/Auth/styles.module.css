@@ -44,7 +44,7 @@
     display: none;
   }
   
-.generalCover div > svg{
+  .gcoV > svg{
     margin-bottom: 70px;
 }
 .sideImg{

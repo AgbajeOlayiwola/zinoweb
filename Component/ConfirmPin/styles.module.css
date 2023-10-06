@@ -1,0 +1,137 @@
+.didnt{
+    color: #656565;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+.innerBack{
+    display: flex;
+    justify-content: center;
+}
+.error{
+    color: red;
+    font-size: 14px;
+}
+.overBack{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -3.67%, #000000 100%);
+}
+.innerBack{
+    padding: 48px;
+    width: 40%;
+    height: 70vh;
+    background: white;
+    z-index: 1000000000000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+}
+.innerBack > p{
+    color: #7B7B7B;
+    text-align: center;
+    margin: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.innerBack >h2{
+    color: #4C8E00;
+    margin: 0px;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
+.confirmPin{
+    width: 70%;
+}
+.confirmPin > p{
+    color: #718F79;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.confirmForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.didnt span{
+    color: var(--primary-400, #4C8E00);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+.verify{
+    color: #4C8E00;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.13px;
+    text-align: center;
+}
+.verifyAccount{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.verifyAccount p{
+    margin: 0px;
+}
+.verifyAccount p > span{
+    color: #4C8E00;
+}
+.kindly{
+    color: #4C8E00;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
+.veriItem{
+    color: #7B7B7B;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.veri{
+    color: #7B7B7B;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+}

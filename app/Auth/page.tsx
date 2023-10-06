@@ -2,15 +2,15 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import Movingh1 from "../Component/SmallComponents/Movingh1";
-import SlideIndicatoe from "../Component/SmallComponents/SlideIndicator";
-import SmallBoxes from "../Component/SmallComponents/SelectionBoxes";
-import LogoSvg from "../Component/SVGS/LogoSvg";
-import Inputs from "../Component/Input";
-import Farmers from "../Component/SignupModules/Farmers";
-import ImageSlider from "../Component/imageSlider";
-import Agents from "../Component/SignupModules/Agent";
-import Merchant from "../Component/SignupModules/Merchant";
+import Movingh1 from "../../Component/SmallComponents/Movingh1";
+import SlideIndicatoe from "../../Component/SmallComponents/SlideIndicator";
+import SmallBoxes from "../../Component/SmallComponents/SelectionBoxes";
+import LogoSvg from "../../Component/SVGS/LogoSvg";
+import Inputs from "../../Component/Input";
+import Farmers from "../../Component/SignupModules/Farmers";
+import ImageSlider from "../../Component/imageSlider";
+import Agents from "../../Component/SignupModules/Agent";
+import Merchant from "../../Component/SignupModules/Merchant";
 
 const Auth = () => {
   const [page, setPage] = useState("");
@@ -67,7 +67,7 @@ const Auth = () => {
     <div className={styles.authSidei}>
       <ImageSlider />
       <div className={styles.generalCover}>
-        <div>
+        <div className={styles.gcoV}>
           <LogoSvg />
           <div className={styles.createAccount}>
             {switchComps ? (
