@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import styles from "./firstMobile.module.css";
+'use client'
+import { useEffect, useState } from "react";
 import Loader from "../Loader";
+import styles from "./firstMobile.module.css";
 
 const FirstButton = ({
   type,
