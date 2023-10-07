@@ -1,19 +1,17 @@
 "use client";
-import Inputs from "@/Component/Input";
-import React, { useState, useMemo, useEffect } from "react";
-import styles from "../../styles.module.css";
-import Onboarding from "@/Component/Layout/Onboarding";
 import FirstButton from "@/Component/Buttons/firstButton";
-import ToggleComponent from "@/Component/ToggleComponent";
-import Select from "@/Component/Select";
-import { commodityValue } from "@/utils/data";
+import Inputs from "@/Component/Input";
 import InputFile from "@/Component/InputFile/indx";
+import Onboarding from "@/Component/Layout/Onboarding";
 import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
-import { Formik } from "formik";
-import * as yup from "yup";
-import { setCookie, getCookie } from "cookies-next";
-import Location from "@/Component/Location";
+import Select from "@/Component/Select";
+import ToggleComponent from "@/Component/ToggleComponent";
 import { useCreateFarmMutation } from "@/reduxtoolkit/api/mutationApi";
+import { commodityValue } from "@/utils/data";
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import * as yup from "yup";
+import styles from "../../styles.module.css";
 const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
@@ -55,6 +53,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
     cac_reg_num: "",
     commodity_value_chain: "",
   };
+
   return (
     <div>
       <Onboarding steps={step}>
@@ -89,6 +88,16 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   />
                   <br />
                   <br />
+                  
+                  <Select
+                    onSelectChange={(e: any) =>
+                      setFieldValue("commodity_value_chain", e.target.value)
+                    }
+                    label="Commodity Value Chain"
+                    dataSet={commodityValue}
+                  />
+                  <br />
+                  <br />
                   <ToggleComponent
                     onchange={(e: any) =>
                       setFieldValue("cac_reg_num", e.target.value)
@@ -103,31 +112,32 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   />
                   <br />
                   <br />
-                  <Select
-                    onSelectChange={(e: any) =>
-                      setFieldValue("commodity_value_chain", e.target.value)
-                    }
-                    label="Commodity Value Chain"
-                    dataSet={commodityValue}
-                  />
-                  <br />
-                  <br />
-                  {/* <Location
-                    onchange={(e: any) =>
-                      setFieldValue("farm_location", e.target.value)
-                    }
-                  />
-                  <br />
-                  <br /> */}
-                  {/* <InputFile
+                  <Inputs
+                        onchange={(e: any) =>
+                          setFieldValue("Farm Location", e.target.value)
+                        }
+                        name="farm_location"
+                        value={values.farm_location}
+                        type="text"
+                        label="Farm Location"
+                        placeholder="Text here...."
+                      />
+                      <br />
+                      <br />
+                
+                  <InputFile
                     label="Farm Video"
                     disclaimer="(360 degree video recording and upload)"
-                    onChange={handleFileChange}
+                    onchange={handleFileChange}
                     icon={<PulsCircleSvg />}
                     uploadLabel="Add file"
+                    name="farm_video"
+                    onImageUrlChange={(data: any) =>
+                          setFieldValue("farm_video", data)
+                        }
                   />
                   <br />
-                  <br /> */}
+                  <br />
                 </div>
                 <FirstButton
                   loads={createFarmLoad}

@@ -7,7 +7,7 @@ const FirstButton = ({
   text,
   loads,
 }: {
-  loads: any;
+  loads?: any;
   type: any;
   text: string;
 }) => {

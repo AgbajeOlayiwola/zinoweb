@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.module.css";
 
 const Inputs = ({
@@ -9,12 +8,12 @@ const Inputs = ({
   name,
   value,
 }: {
-  label: string;
-  placeholder: string;
-  type: string;
-  onchange: any;
-  name: any;
-  value: any;
+  label?: string;
+  placeholder?: string;
+  type?: string;
+  onchange?: any;
+  name?: any;
+  value?: any;
 }) => {
   return (
     <div className={styles.inputs}>

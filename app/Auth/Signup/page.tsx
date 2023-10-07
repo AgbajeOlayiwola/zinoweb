@@ -17,7 +17,7 @@ const Signup = () => {
               app
             </p>
 
-            <Inputs
+            {/* <Inputs
               type="Email"
               label="Email Address"
               placeholder="Enter Your Email Address here...."
@@ -28,7 +28,7 @@ const Signup = () => {
               type="Password"
               label="Surname"
               placeholder="Enter your password here"
-            />
+            /> */}
             <br />
             <br />
             <FirstButton type="Submit" text="Continue" />

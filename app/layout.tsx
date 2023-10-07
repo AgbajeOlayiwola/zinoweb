@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { ApiProvider } from "@reduxjs/toolkit/query/react";
 import { mutationApi } from "@/reduxtoolkit/api/mutationApi";
 import { persistor } from "@/reduxtoolkit/Provider/store";
@@ -9,7 +9,7 @@ import persistStore from "redux-persist/es/persistStore";
 import { PersistGate } from "redux-persist/integration/react";
 import { Providers } from "@/reduxtoolkit/Provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Zino",
@@ -17,11 +17,7 @@ export const metadata: Metadata = {
 };
 // let persistor = persistStore(store);
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Providers>
       {/* <PersistGate loading={null} persistor={persistor}> */}

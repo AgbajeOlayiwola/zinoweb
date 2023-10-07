@@ -1,4 +1,4 @@
-import React, { useState, useRef, ChangeEvent, KeyboardEvent } from "react";
+import { ChangeEvent, KeyboardEvent, useRef, useState } from "react";
 import styles from "./styles.module.css";
 
 interface OtpInputProps {
@@ -9,8 +9,8 @@ const OtpInput = ({
   onOtpChange,
   otpfields,
 }: {
-  onOtpChange: any;
-  otpfields: any;
+  onOtpChange?: any;
+  otpfields?: any;
 }) => {
   const otpLength = otpfields;
   const [otpValues, setOtpValues] = useState<string[]>(

@@ -1,0 +1,165 @@
+.mappingContainer {
+  width: 100%;
+  padding: 100px 0px;
+  background: url("../../../public/images/sdg-map.png"), lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, #fff 0%, rgba(253, 253, 253, 0.72) 100%);
+  background-image: url("../../../public/images/sdg-map.png");
+}
+
+.mappingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mappingHead {
+  width: 77%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 987px;
+}
+
+.mappingHead h2 {
+  color: #1b3200;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px; /* 112.5% */
+  letter-spacing: 0.48px;
+}
+
+.mappingHead p {
+  color: #4f613b;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 150% */
+  letter-spacing: 0.22px;
+}
+
+.mappingBody {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.mappingSingle {
+  width: 49%;
+  border-radius: 16px;
+  border: 1px solid #bababa;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.mappingSingle img {
+  width: 100% !important;
+}
+
+.mappingSingleBody,
+.mappingSingleList {
+  padding: 0px 16px;
+}
+
+.mappingSingleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mappingSingleBody h2 {
+  color: #1ca94e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px; /* 150% */
+  letter-spacing: 0.22px;
+}
+
+.mappingSingleBody p {
+  color: #595959;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  letter-spacing: 0.18px;
+}
+
+.mappingSingleList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mappingSingleList ul {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 16px;
+}
+
+.mappingSingleList ul li {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.16px;
+}
+
+@media screen and (max-width: 500px) {
+  .mappingContainer {
+    padding: 48px 0px;
+  }
+
+  .mappingWrapper {
+    width: 100%;
+  }
+
+  .mappingHead,
+  .mappingSingle {
+    width: 100%;
+  }
+
+  .mappingHead h2 {
+    font-size: 30px;
+    line-height: 40px; /* 133.333% */
+    letter-spacing: 0.3px;
+  }
+
+  .mappingHead p {
+    font-size: 18px;
+    line-height: 27px; /* 150% */
+    letter-spacing: 0.18px;
+  }
+
+  .mappingBody {
+    flex-direction: column;
+  }
+
+  .mappingSingleBody h2 {
+    font-size: 20px;
+    line-height: 30px; /* 150% */
+    letter-spacing: 0.2px;
+  }
+
+  .mappingSingleBody p {
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.16px;
+  }
+
+  .mappingSingleList ul li {
+    font-size: 14px;
+    line-height: 21px; /* 150% */
+    letter-spacing: 0.14px;
+  }
+}

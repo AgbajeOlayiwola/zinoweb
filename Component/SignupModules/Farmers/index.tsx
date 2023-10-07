@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import styles from "./styles.module.css";
-import StepOne from "./OnboardingSteps/StepOne";
-import StepTwo from "./OnboardingSteps/StepTwo";
-import StepThree from "./OnboardingSteps/StepThree";
-import StepFour from "./OnboardingSteps/StepFour";
-import StepFive from "./OnboardingSteps/StepFive";
+import ConfirmPin from "@/Component/ConfirmPin";
 import OtpStep from "@/Component/OtpStep";
 import VirtualAccount from "@/Component/VirtualAccount";
-import ConfirmPin from "@/Component/ConfirmPin";
+import { useState } from "react";
+import StepFive from "./OnboardingSteps/StepFive";
+import StepFour from "./OnboardingSteps/StepFour";
+import StepOne from "./OnboardingSteps/StepOne";
+import StepThree from "./OnboardingSteps/StepThree";
+import StepTwo from "./OnboardingSteps/StepTwo";
+import styles from "./styles.module.css";
 
 const Farmers = () => {
-  const [trackSpot, setTrackSpot] = useState<Number>(2);
+  const [trackSpot, setTrackSpot] = useState<Number>(5);
 
   const steps = () => {
     switch (trackSpot) {

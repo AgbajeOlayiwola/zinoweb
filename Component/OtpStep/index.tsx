@@ -2,14 +2,14 @@
 import FirstButton from "@/Component/Buttons/firstButton";
 import Onboarding from "@/Component/Layout/Onboarding";
 import OtpInput from "@/Component/OtpInput";
-import React, { useState, useEffect } from "react";
-import styles from "./styles.module.css";
 import {
   useSendPhoneVerificationTokenMutation,
   useSendVerificationTokenMutation,
   useVerifyEmailTokenMutation,
   useVerifyPhoneTokenMutation,
 } from "@/reduxtoolkit/api/mutationApi";
+import { useEffect, useState } from "react";
+import styles from "./styles.module.css";
 const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   interface EmailPhoneData {
     emailData: any;
@@ -103,7 +103,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const submit = (e: any) => {
     e.preventDefault();
     const Phonedata = {
-      phone_num: emailPhone?.phoneNumberData,
+      // phone_num: emailPhone?.phoneNumberData,
       token: otpValue,
     };
     verifyPhoneToken(Phonedata);
@@ -111,7 +111,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const submitEmail = (e: any) => {
     e.preventDefault();
     const emaildata = {
-      phone_num: emailPhone?.emailData,
+      // phone_num: emailPhone?.emailData,
       token: otpValue,
     };
     verifyEmailToken(emaildata);
@@ -159,9 +159,11 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
             A verification code has been sent to your{" "}
             {verifyType ? <>email address</> : <>Phone Number</>}{" "}
             {verifyType ? (
-              <span> {emailPhone?.emailData}</span>
+              // <span> {emailPhone?.emailData}</span>
+              <span>x</span>
             ) : (
-              <span> {emailPhone?.phoneNumberData}</span>
+              // <span> {emailPhone?.phoneNumberData}</span>
+              <span></span>
             )}
           </p>
         </div>

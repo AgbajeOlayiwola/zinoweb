@@ -1,6 +1,4 @@
-import React from "react";
 import styles from "./styles.module.css";
-import Already from "../../SmallComponents/Already";
 
 const Onboarding = ({ steps, children }: { steps: any; children: any }) => {
   return (
@@ -10,7 +8,7 @@ const Onboarding = ({ steps, children }: { steps: any; children: any }) => {
           <div>
             <h1>Create Account</h1>
           </div>
-          <p>STEP {steps} of 6</p>
+          <p>STEP {steps} of 8</p>
         </div>
         {steps !== "3" ? (
           <>
