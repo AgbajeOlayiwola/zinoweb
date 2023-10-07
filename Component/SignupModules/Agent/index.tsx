@@ -1,16 +1,16 @@
 "use client";
-import React, { useState } from "react";
-import styles from "./styles.module.css";
+import OtpStep from "@/Component/OtpStep";
+import { useState } from "react";
+import ConfirmPin from "../../ConfirmPin";
+import VirtualAccount from "../../VirtualAccount";
+import StepFour from "./StepFour";
 import StepOne from "./StepOne";
 import StepThree from "./StepThree";
-import StepFour from "./StepFour";
 import StepTwo from "./StepTwo";
-import ConfirmPin from "../../ConfirmPin";
-import OtpStep from "@/Component/OtpStep";
-import VirtualAccount from "../../VirtualAccount";
+import styles from "./styles.module.css";
 
 const Agents = () => {
-  const [trackSpot, setTrackSpot] = useState<Number>(8);
+  const [trackSpot, setTrackSpot] = useState<Number>(3);
   const steps = () => {
     switch (trackSpot) {
       case 2:

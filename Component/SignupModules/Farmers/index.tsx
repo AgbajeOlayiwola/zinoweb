@@ -11,7 +11,7 @@ import StepTwo from "./OnboardingSteps/StepTwo";
 import styles from "./styles.module.css";
 
 const Farmers = () => {
-  const [trackSpot, setTrackSpot] = useState<Number>(5);
+  const [trackSpot, setTrackSpot] = useState<Number>(2);
 
   const steps = () => {
     switch (trackSpot) {
