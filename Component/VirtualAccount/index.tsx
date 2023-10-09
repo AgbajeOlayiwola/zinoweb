@@ -29,8 +29,8 @@ const VirtualAccount = ({ step, nextStep }: { step: any; nextStep: any }) => {
     },
   ]: any = useVirtualAccountAgntMutation();
 
-  const [date, setDate] = useState("");
-  const [emailPhone, setEmailPhone] = useState("");
+  const [date, setDate] = useState<any>("");
+  const [emailPhone, setEmailPhone] = useState<any>("");
   useEffect(() => {
     interface OtpData {
       emailData: string;
