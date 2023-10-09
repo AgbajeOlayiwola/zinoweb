@@ -1,18 +1,13 @@
 "use client";
-import Inputs from "@/Component/Input";
-import React, { useState, useMemo, useEffect } from "react";
-import styles from "../styles.module.css";
-import Onboarding from "@/Component/Layout/Onboarding";
 import FirstButton from "@/Component/Buttons/firstButton";
-import ToggleComponent from "@/Component/ToggleComponent";
-import Select from "@/Component/Select";
-import { nationality } from "@/utils/data";
 import InputFile from "@/Component/InputFile/indx";
+import Onboarding from "@/Component/Layout/Onboarding";
 import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
-import * as yup from "yup";
-import Location from "@/Component/Location";
 import { useVerifyAgentAddressMutation } from "@/reduxtoolkit/api/mutationApi";
 import { Formik } from "formik";
+import { useState } from "react";
+import * as yup from "yup";
+import styles from "../styles.module.css";
 const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
@@ -31,7 +26,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyAgentAddressErr,
       reset: verifyAgentAddressReset,
     },
-  ] = useVerifyAgentAddressMutation();
+  ]: any = useVerifyAgentAddressMutation();
 
   const initSchema = yup.object().shape({
     address: yup.string(),
@@ -65,7 +60,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
                     name="proofOfResidence"
                     label="Proof of Residence "
                     disclaimer="(Utility bill etc)"
-                    onImageUrlChange={(data) => setFieldValue("address", data)}
+                    onImageUrlChange={(data:any) => setFieldValue("address", data)}
                     icon={<PulsCircleSvg />}
                     uploadLabel="Add file"
                   />

@@ -1,19 +1,17 @@
 "use client";
 import FirstButton from "@/Component/Buttons/firstButton";
 import Inputs from "@/Component/Input";
-import Select from "@/Component/Select";
-import { identification } from "@/utils/data";
-import React, { useState, useEffect } from "react";
-import styles from "../../styles.module.css";
 import InputFile from "@/Component/InputFile/indx";
-import Link from "next/link";
-import Already from "@/Component/SmallComponents/Already";
 import Onboarding from "@/Component/Layout/Onboarding";
 import SolarCamera from "@/Component/SVGS/solarCamera";
-import { Formik } from "formik";
-import * as yup from "yup";
+import Select from "@/Component/Select";
 import { useAppDispatch } from "@/reduxtoolkit/Provider/store";
 import { useVerifyFarmerIdMutation } from "@/reduxtoolkit/api/mutationApi";
+import { identification } from "@/utils/data";
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import * as yup from "yup";
+import styles from "../../styles.module.css";
 const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const dispatch = useAppDispatch();
   const [selectedIdentification, setSelectedIdentification] = useState<
@@ -29,7 +27,7 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyFarmerIdErr,
       reset: verifyFarmerIdReset,
     },
-  ] = useVerifyFarmerIdMutation();
+  ]: any = useVerifyFarmerIdMutation();
 
   useEffect(() => {
     console.log(verifyFarmerIdData);

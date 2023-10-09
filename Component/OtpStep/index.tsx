@@ -1,27 +1,27 @@
-"use client";
-import FirstButton from "@/Component/Buttons/firstButton";
-import Onboarding from "@/Component/Layout/Onboarding";
-import OtpInput from "@/Component/OtpInput";
+"use client"
 import {
   useSendPhoneVerificationTokenMutation,
   useSendVerificationTokenMutation,
   useVerifyEmailTokenMutation,
-  useVerifyPhoneTokenMutation,
-} from "@/reduxtoolkit/api/mutationApi";
-import { useEffect, useState } from "react";
-import styles from "./styles.module.css";
+  useVerifyPhoneTokenMutation
+} from "@/reduxtoolkit/api/mutationApi"
+import { useEffect, useState } from "react"
+import FirstButton from "../Buttons/firstButton"
+import Onboarding from "../Layout/Onboarding"
+import OtpInput from "../OtpInput"
+import styles from "./styles.module.css"
 const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
   interface EmailPhoneData {
-    emailData: any;
-    phoneNumberData: any;
+    emailData: any
+    phoneNumberData: any
   }
-  const [otpValue, setOtpValue] = useState(""); // State to store the OTP value
-  const [verifyType, setVerifyType] = useState(false);
-  const [emailPhone, setEmailPhone] = useState<EmailPhoneData[]>();
+  const [otpValue, setOtpValue] = useState("") // State to store the OTP value
+  const [verifyType, setVerifyType] = useState(false)
+  const [emailPhone, setEmailPhone] = useState<any>()
   // Callback function to receive the OTP value from OtpInput
   const handleOtpChange = (otp: string) => {
-    setOtpValue(otp);
-  };
+    setOtpValue(otp)
+  }
   const [
     verifyPhoneToken,
     {
@@ -32,7 +32,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyPhoneTokenErr,
       reset: verifyPhoneTokenReset,
     },
-  ] = useVerifyPhoneTokenMutation();
+  ]: any = useVerifyPhoneTokenMutation()
   const [
     verifyEmailToken,
     {
@@ -43,7 +43,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyEmailTokenErr,
       reset: verifyEmailTokenReset,
     },
-  ] = useVerifyEmailTokenMutation();
+  ]: any = useVerifyEmailTokenMutation()
   const [
     sendVerificationToken,
     {
@@ -54,7 +54,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: sendVerificationTokenErr,
       reset: sendVerificationTokenReset,
     },
-  ] = useSendVerificationTokenMutation();
+  ] = useSendVerificationTokenMutation()
 
   const [
     sendPhoneVerificationToken,
@@ -66,74 +66,74 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: sendPhoneVerificationTokenErr,
       reset: sendPhoneVerificationTokenReset,
     },
-  ] = useSendPhoneVerificationTokenMutation();
+  ] = useSendPhoneVerificationTokenMutation()
 
   useEffect(() => {
     if (verifyPhoneTokenData) {
-      nextStep();
+      nextStep()
     }
     //  else {
     // console.log(verifyPhoneTokenErr);
     // }
-  }, [verifyPhoneTokenSuccess]);
+  }, [verifyPhoneTokenSuccess])
 
   useEffect(() => {
     if (verifyEmailTokenData) {
-      nextStep();
+      nextStep()
     }
-  }, [verifyEmailTokenSuccess, verifyPhoneTokenErr]);
+  }, [verifyEmailTokenSuccess, verifyPhoneTokenErr])
 
   useEffect(() => {
     interface OtpData {
-      emailData: any;
-      phoneNumberData: any;
+      emailData: any
+      phoneNumberData: any
     }
-    const otpDataString = localStorage.getItem("otpData");
-    let emailData: OtpData | null = null;
+    const otpDataString = localStorage.getItem("otpData")
+    let emailData: OtpData | null = null
 
     if (otpDataString) {
       try {
-        setEmailPhone(JSON.parse(otpDataString));
+        setEmailPhone(JSON.parse(otpDataString))
       } catch (error) {
-        console.error("Error parsing OTP data from localStorage:", error);
+        console.error("Error parsing OTP data from localStorage:", error)
       }
     }
-  }, []);
+  }, [])
 
   const submit = (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
     const Phonedata = {
       // phone_num: emailPhone?.phoneNumberData,
       token: otpValue,
-    };
-    verifyPhoneToken(Phonedata);
-  };
+    }
+    verifyPhoneToken(Phonedata)
+  }
   const submitEmail = (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
     const emaildata = {
       // phone_num: emailPhone?.emailData,
       token: otpValue,
-    };
-    verifyEmailToken(emaildata);
-  };
+    }
+    verifyEmailToken(emaildata)
+  }
   const resendEMailotp = () => {
-    sendVerificationToken(emailPhone?.emailData);
-  };
+    sendVerificationToken(emailPhone?.emailData)
+  }
   const resendPhoneOtp = () => {
-    sendPhoneVerificationToken(emailPhone?.phoneNumberData);
-  };
+    sendPhoneVerificationToken(emailPhone?.phoneNumberData)
+  }
   useEffect(() => {
     if (verifyEmailTokenData) {
-      console.log(verifyEmailTokenData);
-      nextStep();
+      console.log(verifyEmailTokenData)
+      nextStep()
     }
-  }, [verifyEmailTokenSuccess, verifyEmailTokenData]);
+  }, [verifyEmailTokenSuccess, verifyEmailTokenData])
   useEffect(() => {
     if (verifyPhoneTokenData) {
-      console.log(verifyPhoneTokenData);
-      nextStep();
+      console.log(verifyPhoneTokenData)
+      nextStep()
     }
-  }, [verifyPhoneTokenSuccess, verifyPhoneTokenData]);
+  }, [verifyPhoneTokenSuccess, verifyPhoneTokenData])
   return (
     <>
       <Onboarding steps={step}>
@@ -147,7 +147,6 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
           ) : null}
           {verifyPhoneTokenErr ? (
             <p className={styles.error}>
-              {" "}
               {verifyPhoneTokenErr?.data?.error?.message}
             </p>
           ) : null}
@@ -167,7 +166,6 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
             )}
           </p>
         </div>
-        <br />
         <br />
         <br />
         <form>
@@ -215,7 +213,7 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
         </form>
       </Onboarding>
     </>
-  );
-};
+  )
+}
 
-export default OtpStep;
+export default OtpStep

@@ -2,13 +2,12 @@
 import FirstButton from "@/Component/Buttons/firstButton";
 import Onboarding from "@/Component/Layout/Onboarding";
 import OtpInput from "@/Component/OtpInput";
-import React, { useState, useEffect } from "react";
-import styles from "./styles.module.css";
 import { useVirtualAccountPinMutation } from "@/reduxtoolkit/api/mutationApi";
-import { Formik } from "formik";
-import Success from "../SVGS/success";
-import SecondButton from "../Buttons/SecondButton";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import SecondButton from "../Buttons/SecondButton";
+import Success from "../SVGS/success";
+import styles from "./styles.module.css";
 const ConfirmPin = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [otpValue, setOtpValue] = useState(""); // State to store the OTP value
   const [confOtpVal, setConfOtpVal] = useState("");

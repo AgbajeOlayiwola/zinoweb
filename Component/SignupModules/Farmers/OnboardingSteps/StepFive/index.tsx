@@ -1,18 +1,17 @@
 "use client";
 import FirstButton from "@/Component/Buttons/firstButton";
 import Inputs from "@/Component/Input";
-import InputFile from "@/Component/InputFile/indx";
 import Onboarding from "@/Component/Layout/Onboarding";
 import Select from "@/Component/Select";
 import ToggleComponent from "@/Component/ToggleComponent";
-import { farmingYears } from "@/utils/data";
-import React, { useState, useEffect } from "react";
-import styles from "../../styles.module.css";
 import { useEditFarmerMutation } from "@/reduxtoolkit/api/mutationApi";
-import { Formik } from "formik";
-import * as yup from "yup";
-import { useDispatch } from "react-redux";
 import { setTest } from "@/reduxtoolkit/slices/tstSlicx";
+import { farmingYears } from "@/utils/data";
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import * as yup from "yup";
+import styles from "../../styles.module.css";
 
 const StepFive = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [dynamicForm, setDynamicForm] = useState(true);
@@ -30,7 +29,7 @@ const StepFive = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: editFarmerErr,
       reset: editFarmerReset,
     },
-  ] = useEditFarmerMutation();
+  ]: any = useEditFarmerMutation();
   const initSchema = yup.object().shape({
     coprMembership: yup.string(),
     farmingexperience: yup.string(),

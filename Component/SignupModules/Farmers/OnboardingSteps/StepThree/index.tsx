@@ -25,7 +25,7 @@ const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: createFarmErr,
       reset: createFarmReset,
     },
-  ] = useCreateFarmMutation();
+  ]: any = useCreateFarmMutation();
   useEffect(() => {
     if (createFarmData) {
       console.log(createFarmData);

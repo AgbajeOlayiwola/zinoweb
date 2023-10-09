@@ -1,18 +1,15 @@
 "use client";
 import FirstButton from "@/Component/Buttons/firstButton";
-import Inputs from "@/Component/Input";
 import InputFile from "@/Component/InputFile/indx";
 import Onboarding from "@/Component/Layout/Onboarding";
+import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
 import Select from "@/Component/Select";
 import ToggleComponent from "@/Component/ToggleComponent";
-import { gender, nationality, technicalYears } from "@/utils/data";
-import React, { useState } from "react";
-import styles from "../styles.module.css";
-import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
-import { Formik } from "formik";
-import * as yup from "yup";
 import { useVerifyAgentExperienceMutation } from "@/reduxtoolkit/api/mutationApi";
-import uploadImageToCloudinary from "@/utils/uploadtocloudinary";
+import { technicalYears } from "@/utils/data";
+import { Formik } from "formik";
+import { useState } from "react";
+import styles from "../styles.module.css";
 
 const StepFour = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [dynamicForm, setDynamicForm] = useState(true);
@@ -39,7 +36,7 @@ const StepFour = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyAgentExperienceErr,
       reset: verifyAgentExperienceReset,
     },
-  ] = useVerifyAgentExperienceMutation();
+  ]:any = useVerifyAgentExperienceMutation();
   const [image, setImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   const [loading, setLoading] = useState(false);

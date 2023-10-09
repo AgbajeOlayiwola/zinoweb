@@ -4,12 +4,11 @@ import Onboarding from "@/Component/Layout/Onboarding";
 import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
 import Select from "@/Component/Select";
 import ToggleComponent from "@/Component/ToggleComponent";
-import { agreement, nationality } from "@/utils/data";
-import React, { useEffect, useState } from "react";
-import styles from "../../styles.module.css";
-import { Formik } from "formik";
-import * as yup from "yup";
 import { useEditFarmMutation } from "@/reduxtoolkit/api/mutationApi";
+import { agreement } from "@/utils/data";
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import styles from "../../styles.module.css";
 const StepFour = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [dynamicForm, setDynamicForm] = useState(true);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -23,7 +22,7 @@ const StepFour = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: editFarmErr,
       reset: editFarmReset,
     },
-  ] = useEditFarmMutation();
+  ]: any = useEditFarmMutation();
 
   const handleFileUpload = (file: any) => {
     // Handle the file upload here, e.g., send it to a server

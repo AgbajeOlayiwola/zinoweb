@@ -27,7 +27,7 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: verifyFarmerIdErr,
       reset: verifyFarmerIdReset,
     },
-  ] = useVerifyFarmerIdMutation();
+  ]: any = useVerifyFarmerIdMutation();
 
   useEffect(() => {
     console.log(verifyFarmerIdData);
@@ -138,9 +138,6 @@ const StepTwo = ({ step, nextStep }: { step: any; nextStep: any }) => {
                         uploadLabel="Upload ID"
                         onImageUrlChange={(data:any) =>
                           setFieldValue("document", data)
-                        }
-                        onchange={(file: any) =>
-                          handleFileUpload(file, setFieldValue)
                         }
                       />
                       <br />
