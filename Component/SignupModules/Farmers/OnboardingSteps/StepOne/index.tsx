@@ -1,17 +1,17 @@
 "use client";
-import Inputs from "@/Component/Input";
-import React, { useEffect, useState } from "react";
-import styles from "../../styles.module.css";
-import Select from "@/Component/Select";
 import FirstButton from "@/Component/Buttons/firstButton";
-import { gender, nationality } from "@/utils/data";
+import Inputs from "@/Component/Input";
 import Onboarding from "@/Component/Layout/Onboarding";
-import { useRegisterNewFarmerMutation } from "@/reduxtoolkit/api/mutationApi";
-import { useAppDispatch } from "@/reduxtoolkit/Provider/store";
-import { Formik } from "formik";
-import * as yup from "yup";
-import { setCookie, getCookie } from "cookies-next";
+import Select from "@/Component/Select";
 import Already from "@/Component/SmallComponents/Already";
+import { useAppDispatch } from "@/reduxtoolkit/Provider/store";
+import { useRegisterNewFarmerMutation } from "@/reduxtoolkit/api/mutationApi";
+import { gender, nationality } from "@/utils/data";
+import { getCookie, setCookie } from "cookies-next";
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import * as yup from "yup";
+import styles from "../../styles.module.css";
 const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const dispatch = useAppDispatch();
   const [selectedGender, setSelectedGender] = useState<string | undefined>(
@@ -27,7 +27,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: newFarmerErr,
       reset: newFarmerReset,
     },
-  ] = useRegisterNewFarmerMutation();
+  ]: any = useRegisterNewFarmerMutation();
 
   useEffect(() => {
     if (newFarmerData) {
