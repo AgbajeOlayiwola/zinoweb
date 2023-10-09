@@ -1,17 +1,12 @@
 "use client";
 import FirstButton from "@/Component/Buttons/firstButton";
 import Inputs from "@/Component/Input";
-import InputFile from "@/Component/InputFile/indx";
 import Onboarding from "@/Component/Layout/Onboarding";
-import Select from "@/Component/Select";
-import ToggleComponent from "@/Component/ToggleComponent";
-import { gender, nationality } from "@/utils/data";
-import React, { useState, useEffect } from "react";
-import styles from "./styles.module.css";
-import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
 import { useVirtualAccountAgntMutation } from "@/reduxtoolkit/api/mutationApi";
 import { Formik } from "formik";
+import { useEffect, useState } from "react";
 import * as yup from "yup";
+import styles from "./styles.module.css";
 const VirtualAccount = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [dynamicForm, setDynamicForm] = useState(true);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -32,7 +27,7 @@ const VirtualAccount = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: virtualAccountAgntErr,
       reset: virtualAccountAgntReset,
     },
-  ] = useVirtualAccountAgntMutation();
+  ]: any = useVirtualAccountAgntMutation();
 
   const [date, setDate] = useState("");
   const [emailPhone, setEmailPhone] = useState("");
