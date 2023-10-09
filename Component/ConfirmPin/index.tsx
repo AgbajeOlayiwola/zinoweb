@@ -31,7 +31,7 @@ const ConfirmPin = ({ step, nextStep }: { step: any; nextStep: any }) => {
       error: virtualAccountPinErr,
       reset: virtualAccountPinReset,
     },
-  ] = useVirtualAccountPinMutation();
+  ]:any = useVirtualAccountPinMutation();
   const initialValues = {
     otpValue: "",
     confOtpVal: "",
