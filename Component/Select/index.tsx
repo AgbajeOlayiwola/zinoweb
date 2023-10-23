@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.module.css";
 
 // select compoenent accepts a data list which is tyo be imported from /util/data

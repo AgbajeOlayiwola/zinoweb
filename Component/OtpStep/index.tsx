@@ -134,6 +134,8 @@ const OtpStep = ({ step, nextStep }: { step: any; nextStep: any }) => {
       nextStep()
     }
   }, [verifyPhoneTokenSuccess, verifyPhoneTokenData])
+
+
   return (
     <>
       <Onboarding steps={step}>

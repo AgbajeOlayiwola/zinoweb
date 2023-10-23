@@ -10,6 +10,8 @@ import { gender, nationality } from "@/utils/data";
 import { getCookie, setCookie } from "cookies-next";
 import { Formik } from "formik";
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import * as yup from "yup";
 import styles from "../../styles.module.css";
 const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
@@ -64,9 +66,20 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
     gender: "",
     nationality: "",
   };
+      const showToastAccountStatusErrorMessage = () => {
+        toast.error(newFarmerErr?.data?.error?.message, {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
+    useEffect(() => {
+        if (newFarmerErr) {
+            showToastAccountStatusErrorMessage();
+        }
+    }, [newFarmerErr]);
   return (
     <div>
       <Onboarding steps={step}>
+         <ToastContainer />
         {newFarmerErr ? (
           <p className={styles.error}>{newFarmerErr?.data?.error?.message}</p>
         ) : null}

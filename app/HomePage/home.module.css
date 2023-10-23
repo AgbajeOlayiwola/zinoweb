@@ -12,7 +12,10 @@
   background: url(../../public/images/hero.png), lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, #fff 0%, rgba(253, 253, 253, 0.72) 100%);
   background-image: url(../../public/images/hero.png);
 } */
-
+.vid {
+  display: flex;
+  justify-content: center;
+}
 .connect {
   display: flex;
   justify-content: center;
