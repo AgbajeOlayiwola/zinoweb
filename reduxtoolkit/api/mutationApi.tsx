@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { getCookie } from "cookies-next";
 // https://zino-1e15f54a9d19.herokuapp.com/api/v1
-const baseUrl = "http://51.20.116.136";
+const baseUrl = "https://api.tribasesolutions.website";
 export const mutationApi = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
