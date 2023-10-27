@@ -7,17 +7,17 @@ import StepFour from "./OnboardingSteps/StepFour";
 import StepFive from "./OnboardingSteps/StepFive";
 
 const Merchant = () => {
-  const [trackSpot, setTrackSpot] = useState<Number>(5);
+  const [trackSpot, setTrackSpot] = useState<Number>(2);
   const steps = () => {
     switch (trackSpot) {
       case 2:
-        return <StepOne step={trackSpot} />;
+        return <StepOne step={trackSpot} nextStep={() => setTrackSpot(3)} />;
       case 3:
-        return <StepTwo step={trackSpot} />;
+        return <StepTwo step={trackSpot} nextStep={() => setTrackSpot(4)} />;
       case 4:
-        return <StepThree step={trackSpot} />;
+        return <StepThree step={trackSpot} nextStep={() => setTrackSpot(5)} />;
       case 5:
-        return <StepFour step={trackSpot} />;
+        return <StepFour step={trackSpot} nextStep={() => setTrackSpot(6)} />;
       case 6:
         return <StepFive step={trackSpot} />;
     }

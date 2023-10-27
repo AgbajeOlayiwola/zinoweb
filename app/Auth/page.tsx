@@ -11,6 +11,9 @@ import Farmers from "../../Component/SignupModules/Farmers";
 import ImageSlider from "../../Component/imageSlider";
 import Agents from "../../Component/SignupModules/Agent";
 import Merchant from "../../Component/SignupModules/Merchant";
+import FarmerImg from "../../Component/assets/images/farmer.png";
+import AgentImg from "../../Component/assets/images/agent.png";
+import MerchantImg from "../../Component/assets/images/merchant.png";
 
 const Auth = () => {
   const [page, setPage] = useState("");
@@ -21,23 +24,20 @@ const Auth = () => {
   const memberData = [
     {
       title: "Farmers",
-      description:
-        "A person or entity engaged in crop production, livestock farming, aquaculture or forestry.",
-      image: "/images/farmer.png",
+      description: "A person or entity engaged in crop production, livestock farming, aquaculture or forestry.",
+      image: FarmerImg,
       click: "farmer",
     },
     {
       title: "Agent",
-      description:
-        "A technical agricultural expert working at Zino Experience Center and supporting field operations",
-      image: "/images/agent.png",
+      description: "A technical agricultural expert working at Zino Experience Center and supporting field operations",
+      image: AgentImg,
       click: "agent",
     },
     {
       title: "Merchant",
-      description:
-        "A person or entity that sells agricultural products and/or provides services located within a Zino Experience Center and supporting field operations.",
-      image: "/images/merchant.png",
+      description: "A person or entity that sells agricultural products and/or provides services located within a Zino Experience Center and supporting field operations.",
+      image: MerchantImg,
       click: "merchant",
     },
   ];

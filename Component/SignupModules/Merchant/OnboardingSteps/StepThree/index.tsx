@@ -12,7 +12,7 @@ import PulsCircleSvg from "@/Component/SVGS/pulsCircleSvg";
 
 import Location from "@/Component/Location";
 import SolarCamera from "@/Component/SVGS/solarCamera";
-const StepThree = ({ step }: { step: any }) => {
+const StepThree = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -24,16 +24,12 @@ const StepThree = ({ step }: { step: any }) => {
   return (
     <div>
       <Onboarding steps={step}>
-        {/* <div className={styles.onBoardingLayout}>
+        <div className={styles.onBoardingLayout}>
           <div>
             <Select label="Type of Identification" dataSet={nationality} />
             <br />
             <br />
-            <Inputs
-              type="text"
-              label=" ID Number"
-              placeholder="Type here...."
-            />
+            <Inputs type="text" label=" ID Number" placeholder="Type here...." />
             <br />
             <br />
             <Inputs type="date" label="Date of Birth" placeholder="Choose..." />
@@ -45,34 +41,18 @@ const StepThree = ({ step }: { step: any }) => {
             <Inputs type="text" label="BVN" placeholder="Type here...." />
             <br />
             <br />
-            <Inputs
-              type="text"
-              label="Tax identification Number"
-              placeholder="Type here...."
-            />
+            <Inputs type="text" label="Tax identification Number" placeholder="Type here...." />
             <br />
             <br />
-            <InputFile
-              label="Supporting Document"
-              disclaimer=""
-              onChange={handleFileChange}
-              icon={<SolarCamera />}
-              uploadLabel="Upload ID"
-            />
+            <InputFile label="Supporting Document" disclaimer="" onchange={handleFileChange} icon={<SolarCamera />} uploadLabel="Upload ID" />
             <br />
             <br />
-            <InputFile
-              label="Identification Card Photo"
-              disclaimer=""
-              onChange={handleFileChange}
-              icon={<SolarCamera />}
-              uploadLabel="Upload ID"
-            />
+            <InputFile label="Identification Card Photo" disclaimer="" onchange={handleFileChange} icon={<SolarCamera />} uploadLabel="Upload ID" />
             <br />
             <br />
           </div>
-          <FirstButton action={()=>{}}type="Submit" text="Continue" />
-        </div> */}
+          <FirstButton type="Submit" text="Continue" />
+        </div>
       </Onboarding>
     </div>
   );

@@ -7,7 +7,7 @@ import ToggleComponent from "@/Component/ToggleComponent";
 import { nationality } from "@/utils/data";
 import React, { useState } from "react";
 import styles from "../../styles.module.css";
-const StepFour = ({ step }: { step: any }) => {
+const StepFour = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -18,32 +18,20 @@ const StepFour = ({ step }: { step: any }) => {
 
   return (
     <Onboarding steps={step}>
-      {/* <div className={styles.onBoardingLayout}>
+      <div className={styles.onBoardingLayout}>
         <div>
-          <Select
-            label="Which aspects are you focused on?"
-            dataSet={nationality}
-          />
+          <Select label="Which aspects are you focused on?" dataSet={nationality} />
           <br />
           <br />
-          <Select
-            label="Years of Post-graduation Technical Experience"
-            dataSet={nationality}
-          />
+          <Select label="Years of Post-graduation Technical Experience" dataSet={nationality} />
           <br />
           <br />
-          <InputFile
-            label="Company Profile Document"
-            disclaimer=""
-            onChange={handleFileChange}
-            icon={<PulsCircleSvg />}
-            uploadLabel="Add file"
-          />
+          <InputFile label="Company Profile Document" disclaimer="" onchange={handleFileChange} icon={<PulsCircleSvg />} uploadLabel="Add file" />
           <br />
           <br />
         </div>
-        <FirstButton action={()=>{}}type="Submit" text="Continue" />
-      </div> */}
+        <FirstButton type="Submit" text="Continue" />
+      </div>
     </Onboarding>
   );
 };

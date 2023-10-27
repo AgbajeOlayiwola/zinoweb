@@ -10,25 +10,16 @@ import { gender, nationality } from "@/utils/data";
 import { getCookie, setCookie } from "cookies-next";
 import { Formik } from "formik";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import * as yup from "yup";
 import styles from "../../styles.module.css";
 const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
   const dispatch = useAppDispatch();
-  const [selectedGender, setSelectedGender] = useState<string | undefined>(
-    undefined
-  );
+  const [selectedGender, setSelectedGender] = useState<string | undefined>(undefined);
   const [
     registerNewFarmer,
-    {
-      data: newFarmerData,
-      isLoading: newFarmerLoad,
-      isSuccess: newFarmerSuccess,
-      isError: newFarmerFalse,
-      error: newFarmerErr,
-      reset: newFarmerReset,
-    },
+    { data: newFarmerData, isLoading: newFarmerLoad, isSuccess: newFarmerSuccess, isError: newFarmerFalse, error: newFarmerErr, reset: newFarmerReset },
   ]: any = useRegisterNewFarmerMutation();
 
   useEffect(() => {
@@ -41,11 +32,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
     }
   }, [newFarmerSuccess, newFarmerData]);
   const initSchema = yup.object().shape({
-    email: yup
-      .string()
-      .trim()
-      .email("Email is required")
-      .required("Email is required"),
+    email: yup.string().trim().email("Email is required").required("Email is required"),
     password: yup.string().required("Enter Password"),
     l_name: yup.string().required("Surrname is required"),
     f_name: yup.string().required("Other Names is required"),
@@ -66,23 +53,21 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
     gender: "",
     nationality: "",
   };
-      const showToastAccountStatusErrorMessage = () => {
-        toast.error(newFarmerErr?.data?.error?.message, {
-            position: toast.POSITION.TOP_RIGHT
-        });
-    };
-    useEffect(() => {
-        if (newFarmerErr) {
-            showToastAccountStatusErrorMessage();
-        }
-    }, [newFarmerErr]);
+  const showToastAccountStatusErrorMessage = () => {
+    toast.error(newFarmerErr?.data?.error?.message, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+  useEffect(() => {
+    if (newFarmerErr) {
+      showToastAccountStatusErrorMessage();
+    }
+  }, [newFarmerErr]);
   return (
     <div>
       <Onboarding steps={step}>
-         <ToastContainer />
-        {newFarmerErr ? (
-          <p className={styles.error}>{newFarmerErr?.data?.error?.message}</p>
-        ) : null}
+        <ToastContainer />
+        {newFarmerErr ? <p className={styles.error}>{newFarmerErr?.data?.error?.message}</p> : null}
         <div className={styles.onBoardingLayout}>
           <Formik
             validationSchema={initSchema}
@@ -95,22 +80,12 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
               };
               localStorage.setItem("otpData", JSON.stringify(otpData)); // Store otpData as a string
               setSubmitting(false);
-            }}
-          >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              setFieldValue,
-              handleSubmit,
-            }) => (
+            }}>
+            {({ values, errors, touched, handleChange, setFieldValue, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
                 <div>
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("l_name", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("l_name", e.target.value)}
                     name="l_name"
                     value={values.l_name}
                     type="text"
@@ -120,9 +95,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   <br />
                   {errors ? <div>{errors?.l_name}</div> : null}
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("f_name", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("f_name", e.target.value)}
                     name="f_name"
                     value={values.f_name}
                     type="text"
@@ -133,9 +106,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   {errors ? <div>{errors?.f_name}</div> : null}
                   <div className={styles.flex}>
                     <Inputs
-                      onchange={(e: any) =>
-                        setFieldValue("phone_num", e.target.value)
-                      }
+                      onchange={(e: any) => setFieldValue("phone_num", e.target.value)}
                       name="phone_num"
                       value={values.phone_num}
                       type="number"
@@ -143,19 +114,11 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                       placeholder="Enter"
                     />
                     {errors ? <div>{errors?.phone_num}</div> : null}
-                    <Select
-                      label="Gender"
-                      dataSet={gender}
-                      onSelectChange={(e: any) =>
-                        setFieldValue("gender", e.target.value)
-                      }
-                    />
+                    <Select label="Gender" dataSet={gender} onSelectChange={(e: any) => setFieldValue("gender", e.target.value)} />
                   </div>
                   <br />
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("email", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("email", e.target.value)}
                     name="email"
                     value={values.email}
                     type="text"
@@ -165,9 +128,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   {errors ? <div>{errors?.email}</div> : null}
                   <br />
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("password", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("password", e.target.value)}
                     name="password"
                     value={values.password}
                     type="password"
@@ -177,30 +138,13 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   {errors ? <div>{errors?.password}</div> : null}
                   <br />
                   <div className={styles.flex}>
-                    <Inputs
-                      onchange={(e: any) =>
-                        setFieldValue("dob", e.target.value)
-                      }
-                      name="dob"
-                      value={values.dob}
-                      type="date"
-                      label="Date of Birth"
-                      placeholder="Choose..."
-                    />
+                    <Inputs onchange={(e: any) => setFieldValue("dob", e.target.value)} name="dob" value={values.dob} type="date" label="Date of Birth" placeholder="Choose..." />
                     {errors ? <div>{errors?.dob}</div> : null}
-                    <Select
-                      label="Nationality"
-                      dataSet={nationality}
-                      onSelectChange={(e: any) =>
-                        setFieldValue("nationality", e.target.value)
-                      }
-                    />
+                    <Select label="Nationality" dataSet={nationality} onSelectChange={(e: any) => setFieldValue("nationality", e.target.value)} />
                   </div>
                   <br />
                   <Inputs
-                    onchange={(e: any) =>
-                      setFieldValue("address", e.target.value)
-                    }
+                    onchange={(e: any) => setFieldValue("address", e.target.value)}
                     name="address"
                     value={values.address}
                     type="text"
@@ -211,11 +155,7 @@ const StepOne = ({ step, nextStep }: { step: any; nextStep: any }) => {
                   {errors ? <div>{errors?.address}</div> : null}
                   <br />
                 </div>
-                <FirstButton
-                  loads={newFarmerLoad}
-                  type="Submit"
-                  text="Continue"
-                />
+                <FirstButton loads={newFarmerLoad} type="Submit" text="Continue" />
               </form>
             )}
           </Formik>

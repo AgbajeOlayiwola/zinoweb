@@ -1,11 +1,11 @@
-/* .subscribeContainer {
+.subscribeContainer {
   width: 82%;
   max-width: 1174px;
-  background-image: url("../images/subscribe-img.png");
+  background-image: url("../../assets/images/subscribe-img.png");
   margin: 0px auto;
   padding: 98px 0px;
   background-repeat: no-repeat;
-} */
+}
 
 .subscribeWrapper {
   width: 75%;

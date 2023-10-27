@@ -3,17 +3,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import RightSvg from "../../SVGS/rightSvg";
 
-const SmallBoxes = ({
-  text,
-  title,
-  image,
-  action,
-}: {
-  text: string;
-  title: string;
-  image: string;
-  action: any;
-}) => {
+const SmallBoxes = ({ text, title, image, action }: { text: string; title: string; image: any; action: any }) => {
   return (
     <div className={styles.box} onClick={action}>
       <div className={styles.innerBox}>
