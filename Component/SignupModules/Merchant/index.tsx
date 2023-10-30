@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import StepOne from "./OnboardingSteps/StepOne";
+// import StepOne from "./OnboardingSteps/StepOne";
 import StepTwo from "./OnboardingSteps/StepTwo";
 import StepThree from "./OnboardingSteps/StepThree";
 import StepFour from "./OnboardingSteps/StepFour";
 import StepFive from "./OnboardingSteps/StepFive";
+import StepOne from "../Farmers/OnboardingSteps/StepOne";
 
 const Merchant = () => {
   const [trackSpot, setTrackSpot] = useState<Number>(2);
@@ -25,7 +26,7 @@ const Merchant = () => {
   return (
     <div className={styles.coverInputs}>
       <div>{steps()}</div>
-      <div></div>
+      {/* <div></div> */}
     </div>
   );
 };

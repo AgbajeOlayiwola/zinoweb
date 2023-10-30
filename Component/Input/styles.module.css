@@ -5,7 +5,8 @@
   padding: 16px;
   background: #f5f5f5;
   border-radius: 24px;
-  width: 95%;
+  width: 100%;
+  box-sizing: border-box;
 }
 .inputs label {
   font-size: 16px;

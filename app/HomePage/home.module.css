@@ -274,11 +274,15 @@
     max-width: unset;
   }
 
+  .comingSoon {
+    background-size: cover;
+  }
+
   .mobile {
     display: unset;
   }
 
-  .desktop {
+  .welcomeDesktop .desktop {
     display: none;
   }
 

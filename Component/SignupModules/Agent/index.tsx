@@ -4,13 +4,14 @@ import { useState } from "react";
 import ConfirmPin from "../../ConfirmPin";
 import VirtualAccount from "../../VirtualAccount";
 import StepFour from "./StepFour";
-import StepOne from "./StepOne";
+// import StepOne from "./StepOne";
 import StepThree from "./StepThree";
 import StepTwo from "./StepTwo";
 import styles from "./styles.module.css";
+import StepOne from "../Farmers/OnboardingSteps/StepOne";
 
 const Agents = () => {
-  const [trackSpot, setTrackSpot] = useState<Number>(3);
+  const [trackSpot, setTrackSpot] = useState<Number>(2);
   const steps = () => {
     switch (trackSpot) {
       case 2:
@@ -24,9 +25,7 @@ const Agents = () => {
       case 6:
         return <StepFour step={trackSpot} nextStep={() => setTrackSpot(7)} />;
       case 7:
-        return (
-          <VirtualAccount step={trackSpot} nextStep={() => setTrackSpot(8)} />
-        );
+        return <VirtualAccount step={trackSpot} nextStep={() => setTrackSpot(8)} />;
       case 8:
         return <ConfirmPin step={trackSpot} nextStep={() => setTrackSpot(8)} />;
     }
@@ -34,7 +33,7 @@ const Agents = () => {
   return (
     <div className={styles.coverInputs}>
       <div>{steps()}</div>
-      <div></div>
+      {/* <div></div> */}
     </div>
   );
 };

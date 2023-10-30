@@ -72,13 +72,13 @@ const HomePage = () => {
                 <div className={styles.welcomeImg}>
                   <div className={styles.welcomeDesktop}>
                     <Image src={WelcomeDesktop} fill={true} alt="welcome" className={styles.desktop} />
+                    <Image src={Phonee} height={573} width={300} alt="welcome" className={styles.mobile} />
                   </div>
-                  <Image src={Phonee} height={573} width={300} alt="welcome" className={styles.mobile} />
                 </div>
-                <h2 className={styles.watch}>
+                {/* <h2 className={styles.watch}>
                   Watch How to Join ZINO
                   <Link href="/#demo"> Here</Link>
-                </h2>
+                </h2> */}
               </div>
             </Cover>
           </div>
