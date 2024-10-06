@@ -1,13 +1,12 @@
-"use client";
-import React from "react";
-import styles from "./styles.module.css";
-import Cover from "../../Cover";
-import LogoSvg from "../../SVGS/LogoSvg";
-import { usePathname } from "next/navigation";
+"use client"
+import { usePathname } from "next/navigation"
+import Cover from "../../Cover"
+import LogoSvg from "../../SVGS/LogoSvg"
+import styles from "./styles.module.css"
 
 const Footer = () => {
-  const date: any = new Date();
-  const pathname = usePathname();
+  const date: any = new Date()
+  const pathname = usePathname()
   return (
     <Cover>
       <div className={styles.footerContainer}>
@@ -39,10 +38,12 @@ const Footer = () => {
               <div className={styles.footerContact}>
                 <h2>Contact </h2>
                 <div>
-                  <p>Abuja - Boya Place, Plot 1004, Ameh Ebute Street, Wuye, FCT </p>
+                  <p>
+                    Abuja - Boya Place, Plot 1004, Ameh Ebute Street, Wuye, FCT{" "}
+                  </p>
                   <p>Lagos – Spacepad, Km 18, Lekki-Epe Expressway, Lagos </p>
-                  <p>+234 703 417 0285 or +234 802 711 8404 </p>
-                  <a href="mailto:adewale@myzino.co">adewale@myzino.co</a>
+                  <p> +234 802 711 8404 </p>
+                  {/* <a href="mailto:adewale@myzino.co">adewale@myzino.co</a> */}
                   <a href="mailto:ayodeji@myzino.co">ayodeji@myzino.co</a>
                 </div>
               </div>
@@ -55,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
     </Cover>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

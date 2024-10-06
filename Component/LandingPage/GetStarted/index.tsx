@@ -1,4 +1,3 @@
-import React from "react"
 import styles from "./styles.module.css"
 
 const GetStarted = () => {
@@ -11,8 +10,8 @@ const GetStarted = () => {
       <div className={styles.vid}>
         <video
           controls
-          width="950"
-          className="w-2/3 h-full aspect-square object-cover rounded-xl "
+          width="450"
+          className="w-1/2 h-full aspect-square object-cover rounded-xl "
         >
           <source src={"/Zino_App.mp4"} type="video/webm" />
         </video>
